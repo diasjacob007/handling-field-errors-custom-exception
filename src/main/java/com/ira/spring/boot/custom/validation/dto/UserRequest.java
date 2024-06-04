@@ -1,5 +1,7 @@
 package com.ira.spring.boot.custom.validation.dto;
 
+import com.ira.spring.boot.custom.validation.annotation.EmployeeTypeValidation;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -29,4 +31,6 @@ public class UserRequest {
     private int age;
     @NotBlank(message = "Please provide the nationality")
     private String nationality;
+    @EmployeeTypeValidation                              //This is the custom annotation
+    private String employeeType;
 }
