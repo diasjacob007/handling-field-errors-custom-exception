@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User saveUser(UserRequest request) {
         User user = new User(0, request.getName(), request.getAge(), request.getEmail(), request.getMobile(),
-                request.getGender(), request.getNationality());
+                request.getGender(), request.getNationality(), request.getEmployeeType());
         return repository.save(user);
     }
 
